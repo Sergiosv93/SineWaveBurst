@@ -1,10 +1,10 @@
-.dark-mode {
+.dark-mode{
     background-color: #333;
     color: #fff;
 }
 
 /* Establece el contenedor como grid */
-.grid-container {
+#grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
     grid-gap: 20px; /* Espacio entre los elementos del grid */

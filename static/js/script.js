@@ -1,6 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Crear un gráfico vacío utilizando Plotly.js
     var layout1 = {
+        plot_bgcolor: '#333', 
+        paper_bgcolor: '#333',
+        font: {
+            color: 'white' // Color del texto
+          },
         title: 'Sine Wave',
         xaxis: {
             title: 'Time'
@@ -62,9 +67,15 @@ document.addEventListener("DOMContentLoaded", function() {
 function toggleDarkMode(e) {
     var body = document.body;
     body.classList.toggle('dark-mode');
+
+    var contenedor1 = document.getElementById('plot1');
+    contenedor1.classList.toggle('dark-mode');
     
     let txt = e.innerText;
     e.innerText = txt == 'Dark Mode' ? 'Light Mode' : 'Dark Mode';
+
+    var colorFondo = plot1.layout.plot_bgcolor;
+    console.log("El color de fondo del gráfico es:", colorFondo);
 
 /*     var p = document.p;
     p.getElementById.toggle('dark-mode') */
