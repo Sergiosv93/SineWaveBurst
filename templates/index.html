@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinusoidal Wave Simulator</title>
+    <!-- <script src="/static/js/plotly-2.32.0.min.js" charset="utf-8"></script> -->
+    <script src="https://cdn.plot.ly/plotly-2.32.0.min.js" charset="utf-8"></script>
+	<link rel="stylesheet" href="/static/css/styles.css">
+	<script src="/static/js/script.js"></script>
+    <link rel="shortcut icon" href="#"/>
+</head>
+
+<body>
+    <h1>Sinusoidal Wave Simulator</h1>
+    <button type="button" onclick="toggleDarkMode(this)">Dark Mode</button><br>
+    <br>
+
+    <div id="waveForm">
+        <label for="vp">Peak Voltage [V]:</label>
+        <input type="number" id="vp" value="1">
+
+        <label for="frequency">Frequency [Hz]:</label>
+        <input type="number" id="frequency" min="1" value="1">
+
+        <label for="cycles">Cycles:</label>
+        <input type="number" id="cycles" min="1" value="1">
+
+        <label for="harmonic"># of Harmonic</label>
+        <input type="number" id="harmonic" min="1" value="0">
+
+		<label for="delay">Delay [ms]:</label>
+        <input type="number" id="delay" min="0" value="0">
+
+		<label for="noise_range">Noise Range:</label>
+        <input type="number" id="noise_range" value="0">
+
+        <button type="button" onclick="plotSineWave()">Plot</button>
+		
+    </div>
+
+    <br>
+
+    <div class="grid-container">
+        <div class="plot" id="plot1"></div>
+        <div class="plot" id="plot2"></div>
+        <div class="plot" id="plot3"></div>
+    </div>
+	
+	
+</body>
+</html>
